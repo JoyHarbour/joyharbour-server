@@ -1,7 +1,6 @@
 package web
 
 import (
-	"fmt"
 	"net/http"
 
 	"github.com/gorilla/mux"
@@ -9,12 +8,7 @@ import (
 
 func HandleRoutes() {
 	r := mux.NewRouter()
-	r.HandleFunc("/", homeHandler)
+	r.Handle("/", RootHandler())
 
 	http.Handle("/", r)
-}
-
-func homeHandler(w http.ResponseWriter, r *http.Request) {
-	w.WriteHeader(http.StatusOK)
-	fmt.Fprintf(w, "hello world!")
 }
