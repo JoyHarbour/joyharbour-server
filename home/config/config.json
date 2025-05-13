@@ -1,0 +1,13 @@
+{
+  "web": {
+    "address": "0.0.0.0:8080",
+    "baseUrl": "http://localhost:8080"
+  },
+  "database": {
+    "type": "sqlite",
+    "dsn": "database.sqlite"
+  },
+  "storage": {
+    "type": "local"
+  }
+}
